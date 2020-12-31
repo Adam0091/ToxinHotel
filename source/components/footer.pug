@@ -1,13 +1,14 @@
 footer.footer   
-    .footer__row
-        .container
+    .footer__row.footer__row--shodow
+        .container.container--footer
             .footer__column--big
                 .logo
                     .logo__svg
-                    .logo__text   
+                        img(src="./img/header-logo.svg", alt="")
+                    .logo__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
             .footer__column 
-                .navigation_
-                    .navigation__title навигация
+                .navigation
+                    .footer__title навигация
                     ul.navigation__menu
                         li.menu__item
                             a(href="") О нас
@@ -19,7 +20,7 @@ footer.footer
                             a(href="") Услуги
             .footer__column
                 .about
-                    .about__title о нас
+                    .footer__title о нас
                     ul.about__menu
                         li.menu__item
                             a(href="") О сервисе
@@ -32,7 +33,7 @@ footer.footer
 
             .footer__column
                 .support 
-                    .support__title Служба поддержки
+                    .footer__title Служба поддержки
                     ul.support__menu
                         li.menu__item
                             a(href="") Соглашения
@@ -42,15 +43,22 @@ footer.footer
                             a(href="") Связь с нами
 
 
-        .footer__column--big
-            .subscribe
-                .subscribe__title Подписка
-                .subscribe__text Получайте специальные предложения и новости сервиса
-                .subscribe__input-email 
-                    input(type= "email", name="")
+            .footer__column--big
+                .subscribe
+                    .footer__title Подписка
+                    .subscribe__text Получайте специальные предложения и новости сервиса
+                    .subscribe__input-email 
+                        input(type= "email", name="" placeholder= "Email")
+                        .arrow
+                            span
 
     .footer__row
         .container
-            .copyright
+            .copyright Copyright © 2018 Toxin отель. Все права зачищены.
             .social-network
-            
+                a
+                    img(src="./img/twitter.svg", alt="")
+                a
+                    img(src="./img/facebook.svg", alt="")
+                a
+                    img(src="./img/instagram.svg", alt="")   

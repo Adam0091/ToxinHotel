@@ -1,20 +1,14 @@
 .header {
-    padding: 18px 0;
+    padding: 15px 0;
+
     &__menu {
 
     }
-    &__navigation{
+    &__nav{
         display: flex;
         align-items: center;
     }
    
-}
-.container {
-    max-width: 1440px - 280px + 100px;
-    margin: 0 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 .logo {
     display: flex;
@@ -28,40 +22,64 @@
     }
 
 }
-.navigation {
+.nav__item--arrow{
+    position: relative;
+    align-items: center;
+    margin: 0 20px 0 0;
+}
+.nav__item--arrow::after,.nav__item--arrow::before{
+    position: absolute;
+    display: inline-block;
+    left: 100%;
+    width: 8px;
+    height: 2px;
+    background: rgba(31, 32, 65, 0.75);
+    cursor: pointer;
+    content: "";
+}
+.nav__item--arrow::before{
+    transform-origin: right;
+    transform: translate(-180%, 5px) rotate(45deg);
+}
+.nav__item--arrow::after{
+    transform-origin: left;
+    transform: translate(-80%, 5px) rotate(-45deg);
+}
+.nav {
     &__menu {
         display: flex;
     }
 
     &__item {
+        display: flex;
         padding: 0 20px 0 0;
         a{
-        font-family: Montserrat;
+       
         font-size: 14px;
         line-height: 17px;
         color: rgba(31, 32, 65, 0.5);
         }
     }
-
+    
     &__buttons{
+        button:active{
+            opacity: 0.5;
+        }
         display: flex;
         button{
             height: 34px;
             width: 100%;
             border-radius: 22px;
-          
-            font-family: Montserrat;
-
             font-weight: bold;
             font-size: 12px;
             line-height: 15px;
-            text-transform: uppercase;
-            
+            text-transform: uppercase;   
         }
         .button-sign-up {
             width: 87px;
-            padding: 0 20px 0 0;
+            margin: 0 20px 0 0 ;
             button{
+                padding: 0 20px;
                 border: 2px solid #BC9CFF;
                 background-color: white;
                 color: #BC9CFF;
@@ -71,7 +89,6 @@
             width: 196px;
             button{
                 background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-                font-family: Montserrat;
                 color: #FFFFFF;
             }
         } 

@@ -1,23 +1,39 @@
-section.registration 
-    form.registration__form
-        h2.form__title Регистрация аккаунта
-        input(class= "form__name", type= "text")
-        input(class= "form__lastname", type= "text")
+section.registration
+    .container
+        form.registration__form
+            h2.form__title Регистрация аккаунта
+            .form__name 
+                input(class= "form__input", type= "text", placeholder= "Имя")
+            .form__lastname
+                input(class= "form__input", type= "text", placeholder= "Фамилия")
+            label.form__gender
+                input(class= "gender-input",type="radio",name="gender", value="man") 
+                span.fake
+                p Мужчина
+            label.form__gender
+                input(class= "gender-input",type="radio",name="gender", value="woman") 
+                span.fake
+                p Женщина
 
-        h3.form__birthday-text дата рождения
-        input(class= "form__birthday",type= "date", name="")
+            h3.form__birthday-text дата рождения
+            input(class= "form__birthday form__input",type= "date", name="")
 
-        h3.form__data-sign-up-text данные для входа в сервис
-        input(type= "email", name="")
-        input(type= "password", name="")
-        
-        .form__subscribe
-            input(class= "subscribe__text", type= "checkbox", name="")
+            h3.form__data-sign-up-text данные для входа в сервис
+            input( class= "form__data-sign-up-email form__input" type= "email", name="", placeholder= "Email")
+            input(class= "form__data-sign-up-password form__input" type= "password", name="", placeholder= "Пароль")
+            
+            .form__subscribe
+                label.switch
+                    input(class= "subscribe__text", type= "checkbox", name="")
+                    span.slider
+                p  Получать спецпредложения
 
-        button.form__authorization перейти к оплате
-        .form__sign-up
-            .sign-up__text Уже есть аккаунт на Toxin
-            .sign-up__button  
-                button войти
-    .registration_bg.ibg
-        img(src="", alt="")
+
+            button.form__authorization-button перейти к оплате
+
+            .form__sign-up
+                .sign-up__text Уже есть аккаунт на Toxin
+                button.sign-up__button войти
+                
+    .main-screen__bg.ibg
+        img(src="./img/bg.jpg", alt="")

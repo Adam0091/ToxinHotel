@@ -2,26 +2,21 @@ header.header
     .container
         .logo
             .logo__svg
-                include ../img/svg/header-logo.svg
-            .logo__svg-text
-                include ../img/svg/header-text.svg
-        nav.header__navigation 
-            ul.navigation__menu
-                li.navigation__item 
+                img(src="./img/header-logo.svg", alt="")
+        nav.header__nav
+            ul.nav__menu
+                li.nav__item 
                     a(href="#") О нас
-                li.navigation__item.navigation__item--arrow 
+                li.nav__item.nav__item--arrow 
                     a(href="#") Услуги
-                li.navigation__item 
+                li.nav__item 
                     a(href="#") Вакансии
-                li.navigation__item 
+                li.nav__item 
                     a(href="#") Новости
-                li.navigation__item.navigation__item--arrow
-                    a(href="#") Соглашения
-            .navigation__buttons
+                li.nav__item.nav__item--arrow
+                    a(href="#") Соглашения 
+            .nav__buttons
                 .button-sign-up
                     button войти
                 .button-registration 
                     button зарегистрироваться
-// Сделать норм svg
-// допилить фон 
-// сделать теги по синиматике форм
