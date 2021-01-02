@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeCssWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TenserWebpackPlugin = require('terser-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack')
+const ImageminPlugin = require('imagemin-webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -32,8 +32,18 @@ const optimization = () =>{
 const plugins = () =>{
     const basePlugins = [
         new HTMLWebpackPlugin({
-            template: path.resolve(__dirname, './source/index.pug'),
-            filename: 'index.html',
+            template: path.resolve(__dirname, './source/pages/registration/index.pug'),
+            filename: 'registration/index.html',
+            chunks: ["registration"],
+            inject: true,
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, './source/pages/sign_in/index.pug'),
+            filename: 'sign_in/index.html',
+            chunks: ["sign_in"],
             inject: true,
             minify: {
                 collapseWhitespace: isProd
@@ -43,26 +53,14 @@ const plugins = () =>{
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`,
         }),
-        new CopyWebpackPlugin({
-            patterns:[
-                {
-                    from: path.resolve(__dirname, './source/assets'),
-                    to:  path.resolve(__dirname, 'app')
-                }
-            ]
-        })
     ];
 
     if (isProd){
         basePlugins.push(
             new ImageminPlugin({
-                bail: false, // Ignore errors on corrupted images
+                bail: false,
                 cache: true,
                 imageminOptions: {
-                  // Before using imagemin plugins make sure you have added them in `package.json` (`devDependencies`) and installed them
-           
-                  // Lossless optimization with custom option
-                  // Feel free to experiment with options for better result for you
                   plugins: [
                     ["gifsicle", { interlaced: true }],
                     ["jpegtran", { progressive: true }],
@@ -88,7 +86,11 @@ const plugins = () =>{
 module.exports = {
     context: path.resolve(__dirname, ""),
     mode: 'development',
-    entry: './source/js/main.js', 
+    entry: {
+        registration: './source/js/main.js',
+        sign_in: './source/js/sign_in.js'
+    },
+         
     output: {
         filename: `./js/${filename('js')}`,
         path: path.resolve(__dirname, 'app'),

@@ -1,8 +1,20 @@
 @import "~normalize.css";
 @import "./fonts.scss";
 @import "./zeroing.scss";
-@import "./index.scss";
-@import "./header.scss";
-@import "./registration.scss";
-@import "./footer.scss";
-@import "./toggle.scss"
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    max-width: 1440px - 280px + 100px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
