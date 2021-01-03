@@ -19,21 +19,21 @@ section.wrapper-for-form
             input(class= "form__birthday form__input",type= "date", name="")
 
             h3.form__data-sign-up-text данные для входа в сервис
-            input( class= "form__data-sign-up-email form__input" type= "email", name="", placeholder= "Email")
+            input(class= "form__data-sign-up-email form__input" type= "email", name="", placeholder= "Email")
             input(class= "form__data-sign-up-password form__input" type= "password", name="", placeholder= "Пароль")
             
             .form__subscribe
                 label.switch
                     input(class= "subscribe__text", type= "checkbox", name="")
                     span.slider
-                p  Получать спецпредложения
+                p Получать спецпредложения
 
 
             button.form__authorization-button перейти к оплате
 
             .form__link-sign-up
                 .link-sign-up__text Уже есть аккаунт на Toxin
-                button.link-sign-up__button войти
+                a.link-sign-up__button(href="sign_in") войти
                 
     .main-screen__bg.ibg
-        img(src="./img/bg.jpg", alt="")
+        img(src="../img/bg.jpg", alt="")

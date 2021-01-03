@@ -94,3 +94,55 @@
         } 
     }
 }
+
+
+.header__burger {
+    display: none;
+    @media (max-width: 767px){
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+        
+        &:before, &:after{
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+        }
+        &:before{
+        top:0;
+        transition: all 0.3s ease 0s;
+        }
+        span{
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        }
+        &:after{
+        bottom: 0;
+        }
+        &.active{
+            &:before{
+                transform:rotate(45deg);
+                top: 9px;
+            }
+            span{
+                transform: scale(0);
+            
+            }
+            &:after{
+                transform:rotate(-45deg);
+                bottom: 9px;
+            }
+        }
+    }
+}

@@ -90,11 +90,9 @@ module.exports = {
         registration: './source/js/main.js',
         sign_in: './source/js/sign_in.js'
     },
-         
     output: {
         filename: `./js/${filename('js')}`,
         path: path.resolve(__dirname, 'app'),
-        publicPath: ''
     },
     devServer:{
         historyApiFallback: true,
