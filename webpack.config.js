@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeCssWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TenserWebpackPlugin = require('terser-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack');
+const autoprefixer = require('autoprefixer');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -124,6 +125,7 @@ module.exports = {
                         }
                     },
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ]
             },
@@ -132,7 +134,7 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options:{
-                        name: `./img/${filename('[ext]')}`,
+                        name: `./img/[name].[ext]`,
                     }
                 }]
             },
