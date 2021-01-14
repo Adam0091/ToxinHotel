@@ -50,6 +50,15 @@ const plugins = () =>{
                 collapseWhitespace: isProd
             }
         }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, './source/pages/room_details/index.pug'),
+            filename: 'room_details/index.html',
+            chunks: ["room_details"],
+            inject: true,
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`,
@@ -89,7 +98,8 @@ module.exports = {
     mode: 'development',
     entry: {
         registration: './source/js/main.js',
-        sign_in: './source/js/sign_in.js'
+        sign_in: './source/js/sign_in.js',
+        room_details: './source/js/room_details.js'
     },
     output: {
         filename: `./js/${filename('js')}`,

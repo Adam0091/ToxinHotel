@@ -1,0 +1,66 @@
+.chart-container{
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.list-container{
+    margin-left: 30px;
+
+
+    ul{    
+        width: 180px;
+        height: 96px;
+    }
+    li{
+        list-style-type: none;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+    li::before{
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color:aqua;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+    li:nth-child(1):before{
+        background-color:#FFE39C;
+    }
+    li:nth-child(2):before{
+        background-color:#6FCF97;
+    }
+    li:nth-child(3):before{
+        background-color:#BC9CFF;
+    }
+    li:nth-child(4):before{
+        background-color:#919191;
+    }
+}
+.chart-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translate(-50%,-50%);
+    color: #BC9CFF;
+    span{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #BC9CFF;
+    }
+}

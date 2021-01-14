@@ -49,6 +49,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "focus-visible": "^5.2.0",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1"
