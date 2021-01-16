@@ -1,0 +1,206 @@
+.form {
+    &__form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 19px;
+    }
+
+    &__date-selection {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__number-guests {
+        margin-bottom: 20px;
+    }
+
+    &__price-information {
+        margin-bottom: 48px;
+    }
+
+    &__total-price {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__book-button {
+
+    }
+    input{
+        height: 44px;
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+.form-header {
+    &__title {
+
+    }
+
+    &__order-number {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        span{
+            font-family: Quicksand;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+
+    &__room-type {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        padding-left: 8px;
+        color: #BC9CFF;
+    }
+
+    &__price-day {
+        font-size: 12px;
+
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(31, 32, 65, 0.5);
+        span{
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            
+            color: rgba(31, 32, 65, 0.5);
+        }
+    }
+}
+.date-selection {
+    &__arrival {
+
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+
+        color: #1F2041;
+    }
+
+    &__input-date {
+        input{
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            border-radius: 4px;
+        }
+    }
+
+    &__departure {
+    }
+}
+.number-guests {
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+
+        color: #1F2041;
+    }
+
+    &__input {
+        input{
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+    }
+}
+.price-information {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__number-days {
+    }
+
+    &__price {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__fee-for-service {
+        display: flex;
+    }
+
+    &__more-detailed {
+    }
+
+    &__additional-services {
+        display: flex;
+    }
+}
+.total-price {
+    &__text{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 23px;
+        color: #1F2041;
+    }
+    &__title {
+
+    }
+
+    &__price {
+    
+    }
+}
+.book-button {
+
+    &__button {
+        button{
+            width: 100%;
+            height: 44px;
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            border-radius: 22px;
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #FFFFFF;
+        }
+    }
+}

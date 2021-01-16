@@ -1,9 +1,19 @@
 section.content
-
+    .content__images
+        .images__column.images__column--b
+            .images__img.ibg
+                img(src="../img/bg_1.jpg", alt="", srcset="")
+        .images__column.images__column--s
+            .images__row
+                .images__img.ibg
+                    img(src="../img/bg_2.jpg" alt="", srcset="")
+            .images__row
+                .images__img.ibg
+                    img(src="../img/bg_3.jpg" alt="", srcset="")
     .container
-        .content__column
+        .content__column--b
             .content__intelligence
-                .intelligence__row
+                .intelligence__row.intelligence__row--about_room
                     .intelligence__column
                         .intelligence__about_room
                             .about_room__title 
@@ -11,21 +21,21 @@ section.content
                             .about_room__list
                                 .about_room__item
                                     .about_room__svg
-                                        img(src="", alt="", srcset="")
+                                        img(src="../img/smail.svg", alt="", srcset="")
                                     .about_room__text
                                         h3 Комфорт
                                         span Шумопоглощающие стены
 
                                 .about_room__item
                                     .about_room__svg
-                                        img(src="", alt="", srcset="")
+                                        img(src="../img/home.svg", alt="", srcset="")
                                     .about_room__text
                                         h3 Удобство
                                         span Окно в каждой из спален
                                         
                                 .about_room__item
                                     .about_room__svg
-                                        img(src="", alt="", srcset="")
+                                        img(src="../img/fire.svg", alt="", srcset="")
                                     .about_room__text
                                         h3 Уют
                                         span Номер оснащён камином
@@ -48,7 +58,8 @@ section.content
                 .intelligence__row
                     .intelligence__reviews
                         .reviews__header 
-                            .header__title Отзывы посетителей номера
+                            .header__title 
+                                h2 Отзывы посетителей номера
                             .header__count_reviews 2 отзыва
                         .reviews__list
                             .reviews__item
@@ -65,10 +76,49 @@ section.content
                                 li.rules__item Без вечеринок и мероприятий
                                 li.rules__item Время прибытия — после 13:00, а выезд до 12:00
 
-                            .rules_services__rules_cancel
-                                .rules_cancel__title 
-                                    h2 Отмена
-                                .rules_cancel_text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-   
-        .content__column
-            .content__form
+                        .rules_services__rules_cancel
+                            .rules_cancel__title 
+                                h2 Отмена
+                            .rules_cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+        .content__column--s
+            form.content__form.form
+                .form__form-header.form-header
+                    .form-header__title
+                        span.form-header__order-number № <span>888</span>
+                        span.form-header__room-type люкс
+                    .form-header__price-day <span>9 990₽</span> в сутки
+                .form__date-selection.date-selection
+                    .date-selection__arrival
+                        .date-selection__title прибытие
+                        .date-selection__input-date
+                            input(type="date", name="" required)
+
+                    .date-selection__departure
+                        .date-selection__title выезд
+                        .date-selection__input-date
+                            input(type="date", name="" required)
+                .form__number-guests
+                    .number-guests__title гости
+                    .number-guests__input   
+                        input(type="number", name="" required)
+                .form__price-information
+                    .price-information__item
+                        .price-information__number-days 9 990₽ х 4 суток
+                        .price-information__price 39 960₽
+                    .price-information__item
+                        .price-information__fee-for-service Сбор за услуги: скидка 2 179₽
+                            .price-information__more-detailed
+                                img(src="", alt="")
+                        .price-information__price 0₽
+                    .price-information__item
+                        .price-information__additional-services Сбор за доп. услуги
+                            .price-information__more-detailed
+                                img(src="", alt="")
+                        .price-information__price 300₽
+                .form__total-price
+                    .total-price__title.total-price__text Итого
+                    .total-price__price.total-price__text 38 081₽
+                .form__book-button
+                    .book-button__button
+                        button забронировать

@@ -1,6 +1,230 @@
 @import "./main.scss";
 @import "./ibg.scss";
 @import "./components/header.scss";
-@import "./components/form_template.scss";
+@import "./components/room_details_form.scss";
 @import "./components/piechart.scss";
 @import "./components/footer.scss";
+
+.content {
+    h2{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 23px;
+
+        color: #1F2041;
+    }
+    h3{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+
+        color: rgba(31, 32, 65, 0.75);
+    }
+    &__images {
+        display: flex;
+        min-height: 485px;
+        margin-bottom: 70px;
+    }
+
+    &__column {
+        &--b{
+            padding-right: 70px;
+        }
+        display: flex;
+    }
+
+    &__intelligence {
+    }
+
+    &__form {
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        padding: 41px 30px 30px 30px;
+        max-width: 380px;
+    }
+}
+
+.images {
+
+    &__column {
+        position: relative;
+        &--b{
+            flex: 0 1 68%
+        }
+        &--s{
+            flex: 0 1 32%
+        }
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__row {
+        position: relative;
+        flex: 0 1 50%;
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+.intelligence {
+    &__row {
+        display: flex;
+        &--about_room{
+            justify-content: space-between;
+        }
+    }
+
+    &__column {
+    }
+
+    &__about_room {
+    }
+
+    &__chart {
+        transform: translateX(-70px);
+    }
+
+    &__reviews {
+        width: 100%;
+    }
+
+    &__rules_services {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.chart__title {
+    margin-bottom: 23px;
+}
+
+.about_room {
+
+    &__title {
+        margin: 0 0 23px 0 ;
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 41px 0;
+    }
+
+    &__svg {
+        margin: 0 10px 0 0;
+    }
+
+    &__text {
+        span{
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+}
+
+.reviews {
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+}
+.header {
+
+    &__title {
+
+    }
+
+    &__count_reviews {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+
+        color: rgba(31, 32, 65, 0.5);
+    }
+}
+.rules_services {
+    &__rules{
+        flex: 0 1 28%;
+    }
+    &__rules_cancel {
+        flex: 0 1 40%;
+    }
+}
+.rules {
+
+    &_cancel {
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        li{
+            position: relative;
+        }
+        li:before{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(31, 32, 65, 0.25);
+            transform: translate(-50%, 70%);
+        }
+    }
+
+    &__item {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+
+        color: rgba(31, 32, 65, 0.75);
+    }
+}
+.rules_cancel {
+
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__text {
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+
+        color: rgba(31, 32, 65, 0.75);
+    }
+}

@@ -47,9 +47,9 @@ footer.footer
                 .subscribe
                     .footer__title Подписка
                     .subscribe__text Получайте специальные предложения и новости сервиса
-                    .subscribe__input-email 
-                        input(type= "email", name="" placeholder= "Email")
-                        .arrow
+                    form.subscribe__input-email
+                        input(type= "email", name="" placeholder= "Email"  required)
+                        button.arrow
                             span
 
     .footer__row

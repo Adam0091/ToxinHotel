@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import '../scss/registration.scss';
 import '../pages/registration/index.pug';
 import '../fonts/Montserrat-Black.woff2';
