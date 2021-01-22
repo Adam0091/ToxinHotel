@@ -58,14 +58,34 @@ section.content
                 .intelligence__row
                     .intelligence__reviews
                         .reviews__header 
-                            .header__title 
+                            .reviews__title 
                                 h2 Отзывы посетителей номера
-                            .header__count_reviews 2 отзыва
+                            .reviews__count_reviews 2 отзыва
                         .reviews__list
                             .reviews__item
-                             //????
-
-
+                                .reviews__icon-and-likes
+                                    .reviews__icon
+                                        img(src="../img/man.jpg", alt="")
+                                    button.reviews__likes.likes
+                                        .likes__heart
+                                            img(src="../img/favorite_border.svg", alt="")
+                                        .likes__count 12
+                                .reviews__description
+                                    .reviews__name Мурад Сарафанов
+                                    .reviews__time 5 дней назад
+                                    .reviews__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                            .reviews__item
+                                .reviews__icon-and-likes
+                                    .reviews__icon
+                                        img(src="../img/girl.jpg", alt="")
+                                    button.reviews__likes.likes.reviews__likes--active
+                                        .likes__heart
+                                            img(src="../img/favorite.svg", alt="")
+                                        .likes__count 2
+                                .reviews__description
+                                    .reviews__name Патрисия Стёклышкова
+                                    .reviews__time Неделю назад
+                                    .reviews__text Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
                 .intelligence__row
                     .intelligence__rules_services
                         .rules_services__rules
@@ -109,12 +129,12 @@ section.content
                     .price-information__item
                         .price-information__fee-for-service Сбор за услуги: скидка 2 179₽
                             .price-information__more-detailed
-                                img(src="", alt="")
+                                img(src="../img/more-detailed.svg", alt="")
                         .price-information__price 0₽
                     .price-information__item
                         .price-information__additional-services Сбор за доп. услуги
                             .price-information__more-detailed
-                                img(src="", alt="")
+                                img(src="../img/more-detailed.svg", alt="")
                         .price-information__price 300₽
                 .form__total-price
                     .total-price__title.total-price__text Итого

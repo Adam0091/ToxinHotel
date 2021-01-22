@@ -8,6 +8,7 @@
 
     &__date-selection {
         display: flex;
+        justify-content: space-between;
         margin-bottom: 20px;
     }
 
@@ -47,7 +48,6 @@
         letter-spacing: 0em;
         text-align: left;
         span{
-            font-family: Quicksand;
             font-size: 24px;
             font-style: normal;
             font-weight: 700;
@@ -106,6 +106,7 @@
 
     &__input-date {
         input{
+            width: 80%;
             border: 1px solid rgba(31, 32, 65, 0.25);
             border-radius: 4px;
         }
@@ -144,9 +145,11 @@
         font-size: 14px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
+        margin-bottom: 10px;
     }
 
     &__number-days {
+        
     }
 
     &__price {
@@ -158,10 +161,12 @@
     }
 
     &__fee-for-service {
+        align-items: center;
         display: flex;
     }
 
     &__more-detailed {
+        margin-left: 8px;
     }
 
     &__additional-services {

@@ -8,3 +8,8 @@ import '../img/room_details/svg/smail.svg';
 import '../img/room_details/bg_1.jpg';
 import '../img/room_details/bg_2.jpg';
 import '../img/room_details/bg_3.jpg';
+import '../img/room_details/reviews/girl.jpg';
+import '../img/room_details/reviews/man.jpg';
+import '../img/room_details/reviews/favorite_border.svg';
+import '../img/room_details/reviews/favorite.svg';
+import '../img/room_details/reviews/more-detailed.svg';

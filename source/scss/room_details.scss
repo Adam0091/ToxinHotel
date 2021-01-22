@@ -91,11 +91,12 @@
     }
 
     &__chart {
-        transform: translateX(-70px);
+        min-width: 310px;
     }
 
     &__reviews {
         width: 100%;
+        margin-bottom: 30px;
     }
 
     &__rules_services {
@@ -139,23 +140,26 @@
         }
     }
 }
-
-.reviews {
-
-    &__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+.likes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &__heart {
+        transform: translateY(20%);
     }
+// плохо так как можент вылетить за пределы
+    &__count {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
 
-    &__list {
-    }
-
-    &__item {
+        color: #BC9CFF;
     }
 }
-.header {
-
+.reviews {
+    
     &__title {
 
     }
@@ -168,13 +172,106 @@
 
         color: rgba(31, 32, 65, 0.5);
     }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 23px;
+    }
+    &__item {
+        display: flex;
+        margin-bottom: 23px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon-and-likes {
+        margin-right: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__likes--active {
+        position: relative;
+        width: 39.72px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(31, 32, 65, 1);
+        .likes__count{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+    
+            color: rgba(31, 32, 65, 0.25);
+        }
+    }
+
+    &__icon {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 12px;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-20%,-15%);
+        }
+    }
+
+    &__likes {
+        position: relative;
+        width: 39.72px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+    }
+
+    &__description {
+    }
+
+    &__name {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__time {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 10px;
+
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+
+        color: rgba(31, 32, 65, 0.75);
+    }
 }
+
+
 .rules_services {
     &__rules{
         flex: 0 1 28%;
     }
     &__rules_cancel {
-        flex: 0 1 40%;
+        flex: 0 1 310px;
     }
 }
 .rules {
